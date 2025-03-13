@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/httpserver.dir/test1.cc.o -o ../../../test/testHTTP/httpserver  -Wl,-rpath,/home/itach/code/project/mymuduo/lib ../../../lib/libhttp.so ../../../lib/libtcp.so 
+/usr/bin/g++ -O3 -DNDEBUG CMakeFiles/httpserver.dir/test1.cc.o -o ../../../test/testHTTP/httpserver  -Wl,-rpath,/home/itach/code/project/mymuduo/lib ../../../lib/libhttp.so ../../../lib/libtcp.so 

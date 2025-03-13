@@ -66,7 +66,7 @@ int main()
     //server.EnableInactiveDestroy(5);
     server.SetBaseDir("./wwwroot");
 
-    server.SetThreadNum(4);
+    server.SetThreadNum(3);
     server.Get("/hello", std::move(hello));
     server.Put("/putfile", std::move(putfile));
     server.Post("/post", std::move(post));

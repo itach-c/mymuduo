@@ -63,8 +63,7 @@ CMAKE_BINARY_DIR = /home/itach/code/project/mymuduo/test/testHTTP/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/http_server.dir/all
-all: CMakeFiles/testclient.dir/all
+all: CMakeFiles/httpserver.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,61 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/http_server.dir/clean
-clean: CMakeFiles/testclient.dir/clean
+clean: CMakeFiles/httpserver.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/http_server.dir
+# Target rules for target CMakeFiles/httpserver.dir
 
 # All Build rule for target.
-CMakeFiles/http_server.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target http_server"
-.PHONY : CMakeFiles/http_server.dir/all
+CMakeFiles/httpserver.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles --progress-num=1,2 "Built target httpserver"
+.PHONY : CMakeFiles/httpserver.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/http_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/http_server.dir/all
+CMakeFiles/httpserver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/httpserver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles 0
-.PHONY : CMakeFiles/http_server.dir/rule
+.PHONY : CMakeFiles/httpserver.dir/rule
 
 # Convenience name for target.
-http_server: CMakeFiles/http_server.dir/rule
-.PHONY : http_server
+httpserver: CMakeFiles/httpserver.dir/rule
+.PHONY : httpserver
 
 # clean rule for target.
-CMakeFiles/http_server.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/clean
-.PHONY : CMakeFiles/http_server.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/testclient.dir
-
-# All Build rule for target.
-CMakeFiles/testclient.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testclient.dir/build.make CMakeFiles/testclient.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testclient.dir/build.make CMakeFiles/testclient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles --progress-num=15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target testclient"
-.PHONY : CMakeFiles/testclient.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/testclient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/testclient.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles 0
-.PHONY : CMakeFiles/testclient.dir/rule
-
-# Convenience name for target.
-testclient: CMakeFiles/testclient.dir/rule
-.PHONY : testclient
-
-# clean rule for target.
-CMakeFiles/testclient.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testclient.dir/build.make CMakeFiles/testclient.dir/clean
-.PHONY : CMakeFiles/testclient.dir/clean
+CMakeFiles/httpserver.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/clean
+.PHONY : CMakeFiles/httpserver.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

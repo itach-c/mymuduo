@@ -1,4 +1,0 @@
-/home/itach/code/project/mymuduo/test/testTcp/build/CMakeFiles/tcp_server.dir
-/home/itach/code/project/mymuduo/test/testTcp/build/CMakeFiles/clinet.dir
-/home/itach/code/project/mymuduo/test/testTcp/build/CMakeFiles/edit_cache.dir
-/home/itach/code/project/mymuduo/test/testTcp/build/CMakeFiles/rebuild_cache.dir

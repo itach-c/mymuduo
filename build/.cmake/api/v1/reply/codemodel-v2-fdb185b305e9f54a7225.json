@@ -1,0 +1,231 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "source/http",
+					"jsonFile" : "directory-source.http-Debug-0ff07bc901254e298df9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "source/http",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "source/tcp",
+					"jsonFile" : "directory-source.tcp-Debug-145a074832bdcd236c75.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "source/tcp",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "test/testHTTP",
+					"jsonFile" : "directory-test.testHTTP-Debug-1b47197c96b66552cb33.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "test/testHTTP",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "test/testmuduo",
+					"jsonFile" : "directory-test.testmuduo-Debug-cf62e42b32c9be5b344e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "test/testmuduo",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "test/testTcp",
+					"jsonFile" : "directory-test.testTcp-Debug-31d21f93c7f8f56993d2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "test/testTcp",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "mymuduo"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "http",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "tcp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "testHttp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "testmuduo",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "testTcp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "http::@8508c0962b1722914d0d",
+					"jsonFile" : "target-http-Debug-f7a1306efe70bf9b5e98.json",
+					"name" : "http",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "httpserver::@8ffc1ceb077bfa852aa0",
+					"jsonFile" : "target-httpserver-Debug-dea9345e336fcbc5033e.json",
+					"name" : "httpserver",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "server::@130c6cd72f1c691688ca",
+					"jsonFile" : "target-server-Debug-9ef17957537f8070dd9e.json",
+					"name" : "server",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "tcp::@f5674b26ca1764bbc136",
+					"jsonFile" : "target-tcp-Debug-68fde21e2808dd24c8eb.json",
+					"name" : "tcp",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "tcpserver::@b6ac9c8efb780c17d0d8",
+					"jsonFile" : "target-tcpserver-Debug-a8313f237f15ccd86668.json",
+					"name" : "tcpserver",
+					"projectIndex" : 5
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/itach/code/project/mymuduo/build",
+		"source" : "/home/itach/code/project/mymuduo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

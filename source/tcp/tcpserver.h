@@ -30,7 +30,7 @@ public:
 
     void SetOnConnectionCallBack(const ConnectionCallBack &cb) { connect_callback_ = cb; }
 
-    void SetOnEventsCallBack(const EventCallBack &cb) {}
+    void SetOnEventsCallBack(const EventCallBack &cb) {event_callback_ = cb;}
 
     void SetOnCloseCallBack(const CloseCallBack &cb) { close_callback_ = cb; }
 

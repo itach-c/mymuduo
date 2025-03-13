@@ -19,7 +19,7 @@ void LoopThreadPool::Create()
     {
         loop_threads_[i] = (std::make_unique<LoopThread>());
         loops_[i] = (loop_threads_[i]->GetLoop());
-        LOG_DEBUG("loop[%d]: %p  ",i,loop_threads_[i]->GetLoop())
+        LOG_DEBUG("loop[%d]: %p  ",i,loop_threads_[i]->GetLoop());
     }
 }
 

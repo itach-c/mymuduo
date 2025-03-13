@@ -1,4 +1,3 @@
-/home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles/http_server.dir
-/home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles/testclient.dir
+/home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles/httpserver.dir
 /home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles/edit_cache.dir
 /home/itach/code/project/mymuduo/test/testHTTP/build/CMakeFiles/rebuild_cache.dir

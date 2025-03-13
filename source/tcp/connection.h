@@ -33,7 +33,7 @@ private:
     Channel channel_;  // 连接事件管理
     Buffer inbuffer_;  // 接受缓冲区
     Buffer outbuffer_; // 发送缓冲区
-    EventLoop *loop_;
+    EventLoop *loop_;//这里如果是单线程,那就是baseloop如果是多线程，那主线程只负责accept,从属线程负责监听读写。
     bool enable_inactive_distory_; // 设置为true 会对长时间不通信的 connection销毁默认为false
     uint64_t timerid_;             // 定时器id
     std::any context_;             // 协议上下文

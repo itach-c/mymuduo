@@ -174,7 +174,7 @@ void HttpServer::OnMessage(Connection::PtrConnection conn, Buffer *buffer)
             {
                 return; // 其余情况暂时先不关闭连接，如果后续数据到达接着组装解析，如果超过非活跃连接断开，那自动关闭
             }
-            if (req.isShortConnection() == true)
+           // if (req.isShortConnection() == true)
                 conn->ShutDown();
         }
     }

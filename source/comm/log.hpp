@@ -10,13 +10,18 @@ namespace ns_log {
 // 日志级别枚举
 enum LogLevels
 {
-    INFO,  // 普通信息  
-    DEBUG, // 调试信息
-    ERROR, // 错误信息
-    FATAL, // 致命信息
+    INFO  = 1,  // 普通信息  
+    DEBUG = 2,  // 调试信息
+    ERROR = 3,  // 错误信息
+    FATAL = 4,  // 致命信息
 };
 
-// 日志类
+// 默认日志级别（可通过 -DLOG_LEVEL=3 进行修改）
+#ifndef LOG_LEVEL
+#define LOG_LEVEL 3
+#endif
+
+// 日志类（单例模式）
 class Logger : public nocopy
 {
 public:
@@ -28,85 +33,79 @@ public:
 
     ~Logger() {}
 
-    // 设置日志级别
-    void SetLevel(int level)
-    {
-        logLevel_ = level;
-    }
-
     // 写日志
-    void writeLog(const std::string& message)
+    void writeLog(int level, const std::string& message)
     {
-        std::lock_guard<std::mutex> lock(mutex_);  // 使用锁保护日志写入
-        switch (logLevel_)
+        std::string prefix;
+        switch (level)
         {
         case INFO:
-            std::cout << "[INFO] ";
-            break;
-        case ERROR:
-            std::cout << "[ERROR] ";
+            prefix = "[INFO] ";
             break;
         case DEBUG:
-            std::cout << "[DEBUG] ";
+            prefix = "[DEBUG] ";
+            break;
+        case ERROR:
+            prefix = "[ERROR] ";
             break;
         case FATAL:
-            std::cout << "[FATAL] ";
+            prefix = "[FATAL] ";
             break;
         default:
-            break;
+            return;
         }
         std::string time = Timestamp::now().TimestamptoString();
-        std::cout << "[" << time.c_str() << "]" << ": " << message.c_str() << std::endl;
+        std::cout << prefix << "[" << time << "]" << ": " << message << std::endl;
     }
 
 private:
-    Logger() : logLevel_(INFO) {}
-
-private:
-    int logLevel_;
-    std::mutex mutex_;  // 用于保护日志写入的互斥量
+    Logger() {}
 };
 
 } // namespace ns_log
 
-// 宏定义：日志宏，方便调用
+// **日志宏（LOG_LEVEL 低于当前设定级别的将被移除）**
+#if LOG_LEVEL <= 1
+#define LOG_INFO(...)
+#else
 #define LOG_INFO(Logmsgformat, ...) \
     do { \
         ns_log::Logger& logger = ns_log::Logger::GetInstance(); \
-        logger.SetLevel(ns_log::INFO); \
         char buf[1024]; \
         snprintf(buf, 1024, "[%s:%d] " Logmsgformat, __FILE__, __LINE__, ##__VA_ARGS__); \
-        logger.writeLog(buf); \
-    } while (0);
+        logger.writeLog(ns_log::INFO, buf); \
+    } while (0)
+#endif
+
+#if LOG_LEVEL <= 2
+#define LOG_DEBUG(...)
+#else
+#define LOG_DEBUG(Logmsgformat, ...) \
+    do { \
+        ns_log::Logger& logger = ns_log::Logger::GetInstance(); \
+        char buf[1024]; \
+        snprintf(buf, 1024, "[%s:%d] " Logmsgformat, __FILE__, __LINE__, ##__VA_ARGS__); \
+        logger.writeLog(ns_log::DEBUG, buf); \
+    } while (0)
+#endif
+
+#if LOG_LEVEL <= 3
+#define LOG_ERROR(...)
+#else
+#define LOG_ERROR(Logmsgformat, ...) \
+    do { \
+        ns_log::Logger& logger = ns_log::Logger::GetInstance(); \
+        char buf[1024]; \
+        snprintf(buf, 1024, "[%s:%d] " Logmsgformat, __FILE__, __LINE__, ##__VA_ARGS__); \
+        logger.writeLog(ns_log::ERROR, buf); \
+    } while (0)
+#endif
 
 #define LOG_FATAL(Logmsgformat, ...) \
     do { \
         ns_log::Logger& logger = ns_log::Logger::GetInstance(); \
-        logger.SetLevel(ns_log::FATAL); \
         char buf[1024]; \
         snprintf(buf, 1024, "[%s:%d] " Logmsgformat, __FILE__, __LINE__, ##__VA_ARGS__); \
-        logger.writeLog(buf); \
+        logger.writeLog(ns_log::FATAL, buf); \
         std::exit(1); \
-    } while (0);
-
-#ifdef DEBUGMOD
-#define LOG_DEBUG(Logmsgformat, ...) \
-    do { \
-        ns_log::Logger& logger = ns_log::Logger::GetInstance(); \
-        logger.SetLevel(ns_log::DEBUG); \
-        char buf[1024]; \
-        snprintf(buf, 1024, "[%s:%d] " Logmsgformat, __FILE__, __LINE__, ##__VA_ARGS__); \
-        logger.writeLog(buf); \
-    } while (0);
-#else
-#define LOG_DEBUG(Logmsgformat, ...)
-#endif
-
-#define LOG_ERROR(Logmsgformat, ...) \
-    do { \
-        ns_log::Logger& logger = ns_log::Logger::GetInstance(); \
-        logger.SetLevel(ns_log::ERROR); \
-        char buf[1024]; \
-        snprintf(buf, 1024, "[%s:%d] " Logmsgformat, __FILE__, __LINE__, ##__VA_ARGS__); \
-        logger.writeLog(buf); \
-    } while (0);
+    } while (0)

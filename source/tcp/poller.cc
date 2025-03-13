@@ -49,7 +49,7 @@ void Poller::Poll(std::vector<Channel *> *active)
     {
         if (errno == EINTR)
         {
-            LOG_ERROR("epoll_wait 被信号打断")
+            LOG_ERROR("epoll_wait 被信号打断");
             return;
         }
 

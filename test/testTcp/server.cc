@@ -181,17 +181,17 @@
 
 void OnConnection(Connection::PtrConnection conn)
 {
-    std::cout << "get a new connection" << std::endl;
-    std::cout << "accptor tid-------" << gettid() << std::endl;
+    //std::cout << "get a new connection" << std::endl;
+   
     LOG_INFO("conn address %p", conn.get());
 }
 void OnMessage(Connection::PtrConnection conn, Buffer *buffer)
 {
-    std::cout << "读事件触发" << std::endl;
-    std::cout << "tid: ---------" << gettid() << std::endl;
+   // std::cout << "读事件触发" << std::endl;
+    
 
     std::string str = buffer->ReadAsString(buffer->ReadAbleBytes());
-    std::cout << str.c_str() << std::endl;
+    
 
     // 构建 HTTP 响应报文
     std::string data = "HTTP/1.1 200 OK\r\n";
@@ -203,14 +203,14 @@ void OnMessage(Connection::PtrConnection conn, Buffer *buffer)
 
     // 发送响应数据
     conn->Send(data.c_str(), data.size());
-    conn->ShutDown();
+    conn ->ShutDown();
+ 
 }
 
 void OnEvent(Connection::PtrConnection)
 {
 
-    std::cout << "有一个事件" << std::endl;
-    sleep(1);
+  LOG_INFO("有一个事件");
 }
 void OnClose(Connection::PtrConnection conn)
 {
@@ -221,7 +221,7 @@ void OnClose(Connection::PtrConnection conn)
 int main()
 {
     TcpServer server("0.0.0.0",8888,true);
-    server.SetThreadNum(2);
+    server.SetThreadNum(3);
     server.SetOnConnectionCallBack(OnConnection);
     server.SetOnMessageCallBack(OnMessage);
     server.SetOnEventsCallBack(OnEvent);

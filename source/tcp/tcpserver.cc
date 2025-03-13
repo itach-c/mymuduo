@@ -45,11 +45,13 @@ void TcpServer::ReMoveConnectionInLoop(const Connection::PtrConnection &conn)
 
 void TcpServer::NewConnection(int fd)
 {
+    
     EventLoop* nextloop = loopthread_pool_.NextLoop();
     LOG_DEBUG("newfd %d -> eventloop %p ",fd ,nextloop);
     Connection::PtrConnection conn(new Connection(nextloop, nextid_, fd));
     connections_.insert(std::make_pair(nextid_, conn));
     nextid_++;
+  
 
     conn->SetConnectedCallBack(connect_callback_);
 

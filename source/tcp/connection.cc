@@ -32,7 +32,7 @@ void Connection::HandleRead()
     }
     else if (n == 0)
     {
-        return ShutDown() ;
+        return;
     }
     inbuffer_.Write(buf, n);
     if (inbuffer_.ReadAbleBytes() > 0)
@@ -89,7 +89,7 @@ void Connection::HandleError()
     {
         message_callback_(shared_from_this(), &inbuffer_);
     }
-    return HandleClose();
+    return relese();
 }
 
 // 事件触发处理的主函数
@@ -131,7 +131,14 @@ void Connection::ShutDownInLoop()
 // 关闭连接，如果有数据待处理，发送完再销毁连接
 void Connection::ShutDown()
 {
-    loop_->RunInLoop(std::bind(&Connection::ShutDownInLoop, this));
+    if (loop_->IsInLoop())
+    {
+        ShutDownInLoop();
+    }
+    else
+    {
+        loop_->RunInLoop(std::bind(&Connection::ShutDownInLoop, this));
+    }
 }
 
 // 取消在指定时间内销毁连接
@@ -149,8 +156,14 @@ void Connection::CancelInactiveDistroyInLoop()
 void Connection::CancelInactiveDistroy()
 {
     // 函数体: 实现取消销毁连接的逻辑
-
-    loop_->RunInLoop(std::bind(&Connection::CancelInactiveDistroyInLoop, this));
+    if (loop_->IsInLoop())
+    {
+        CancelInactiveDistroyInLoop();
+    }
+    else
+    {
+        loop_->RunInLoop(std::bind(&Connection::CancelInactiveDistroyInLoop, this));
+    }
 }
 // 切换协议并更新回调
 void Connection::UpGrade(std::any context, const ConnectionCallBack &conncb, const CloseCallBack &closecb,
@@ -178,8 +191,7 @@ void Connection::UpGradeInLoop(std::any context, const ConnectionCallBack &connc
 void Connection::releseInLoop()
 {
     // 修改连接状态,将其置为disconnectioned
-    if (statu_ == DISCONNECTED)
-        return;
+
     statu_ = DISCONNECTED;
     // 移除事件监控 关闭描述符
 
@@ -201,6 +213,8 @@ void Connection::releseInLoop()
 
 void Connection::relese()
 {
+    if (statu_ = DISCONNECTED)
+        return;
 
     return loop_->QueueInLoop(std::bind(&Connection::releseInLoop, this));
 }
@@ -208,6 +222,7 @@ void Connection::relese()
 // 给一个 channel 设置回调并启动监控
 void Connection::EstablishedInLoop()
 {
+
     // 修改连接状态,启动监控，调用回调
     assert(statu_ == CONNECTING);
     statu_ = CONNECTED;
@@ -220,13 +235,22 @@ void Connection::EstablishedInLoop()
 void Connection::Established()
 {
     // 函数体: 实现设置连接已建立状态的逻辑
-    loop_->RunInLoop(std::bind(&Connection::EstablishedInLoop, this));
+    if (loop_->IsInLoop())
+    {
+        EstablishedInLoop();
+    }
+    else
+    {
+
+        loop_->RunInLoop(std::bind(&Connection::EstablishedInLoop, this));
+    }
 }
 
 // 发送数据（在事件循环中）
 void Connection::SendInLoop(std::string str)
 {
     // 实现代码...
+
     if (statu_ == DISCONNECTED)
         return;
     outbuffer_.Write(str.c_str(), str.size());
@@ -239,8 +263,14 @@ void Connection::SendInLoop(std::string str)
 // 发送数据
 void Connection::Send(const char *data, size_t len)
 {
-
-    loop_->RunInLoop(std::bind(&Connection::SendInLoop, this, std::string(data, data + len)));
+    if (loop_->IsInLoop())
+    {
+        SendInLoop(std::string(data, data + len));
+    }
+    else
+    {
+        loop_->RunInLoop(std::bind(&Connection::SendInLoop, this, std::string(data, data + len)));
+    }
 }
 // 启用在指定时间内销毁连接
 void Connection::EnableInactiveDistroyInLoop(int second)
@@ -260,6 +290,12 @@ void Connection::EnableInactiveDistroyInLoop(int second)
 void Connection::EnableInactiveDistroy(int second)
 {
     // 函数体: 实现启用销毁连接的逻辑
-   
-    loop_->RunInLoop(std::bind(&Connection::EnableInactiveDistroyInLoop, this, second));
+    if (loop_->IsInLoop())
+    {
+        EnableInactiveDistroyInLoop(second);
+    }
+    else
+    {
+        loop_->RunInLoop(std::bind(&Connection::EnableInactiveDistroyInLoop, this, second));
+    }
 }
