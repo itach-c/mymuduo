@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../lib/libtcp.pdb"
-  "../../../lib/libtcp.so"
+  "/home/itach/code/project/mymuduo/lib/libtcp.pdb"
+  "/home/itach/code/project/mymuduo/lib/libtcp.so"
   "CMakeFiles/tcp.dir/acceptor.cc.o"
   "CMakeFiles/tcp.dir/acceptor.cc.o.d"
   "CMakeFiles/tcp.dir/buffer.cc.o"

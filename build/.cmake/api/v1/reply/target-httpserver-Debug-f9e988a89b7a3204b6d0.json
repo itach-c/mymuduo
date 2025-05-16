@@ -11,12 +11,14 @@
 		"commands" : 
 		[
 			"add_executable",
+			"add_library",
 			"add_definitions",
 			"include_directories"
 		],
 		"files" : 
 		[
 			"test/testHTTP/CMakeLists.txt",
+			"source/http/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -36,26 +38,35 @@
 			{
 				"command" : 1,
 				"file" : 1,
+				"line" : 10,
+				"parent" : 2
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
 				"line" : 4,
-				"parent" : 2
+				"parent" : 4
 			},
 			{
-				"command" : 2,
-				"file" : 1,
+				"command" : 3,
+				"file" : 2,
 				"line" : 14,
-				"parent" : 2
+				"parent" : 4
 			},
 			{
-				"command" : 2,
-				"file" : 1,
+				"command" : 3,
+				"file" : 2,
 				"line" : 15,
-				"parent" : 2
+				"parent" : 4
 			},
 			{
-				"command" : 2,
-				"file" : 1,
+				"command" : 3,
+				"file" : 2,
 				"line" : 16,
-				"parent" : 2
+				"parent" : 4
 			}
 		]
 	},
@@ -71,22 +82,22 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 5,
 					"define" : "LOG_LEVEL=0"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 6,
 					"path" : "/home/itach/code/project/mymuduo/./source/http"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 7,
 					"path" : "/home/itach/code/project/mymuduo/./source/tcp"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"path" : "/home/itach/code/project/mymuduo/./source/commn"
 				}
 			],
@@ -135,11 +146,12 @@
 			},
 			{
 				"backtrace" : 1,
-				"fragment" : "../../../lib/libhttp.so",
+				"fragment" : "/home/itach/code/project/mymuduo/lib/libhttp.so",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "../../../lib/libtcp.so",
+				"backtrace" : 3,
+				"fragment" : "/home/itach/code/project/mymuduo/lib/libtcp.so",
 				"role" : "libraries"
 			}
 		],

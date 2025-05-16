@@ -194,8 +194,9 @@ void Connection::releseInLoop()
 
     statu_ = DISCONNECTED;
     // 移除事件监控 关闭描述符
-
+    channel_.DisAbleAll();
     channel_.ReMoveEvent();
+
     socket_.Close();
     // 定时器队列中还有定时任务 则销毁它
     if (loop_->HasTimer(con_id_))

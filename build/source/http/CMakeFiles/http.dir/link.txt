@@ -1,1 +1,1 @@
-/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libhttp.so -o ../../../lib/libhttp.so CMakeFiles/http.dir/httpServer.cc.o  -Wl,-rpath,/home/itach/code/project/mymuduo/lib ../../../lib/libtcp.so 
+/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libhttp.so -o /home/itach/code/project/mymuduo/lib/libhttp.so CMakeFiles/http.dir/httpServer.cc.o  -Wl,-rpath,/home/itach/code/project/mymuduo/lib /home/itach/code/project/mymuduo/lib/libtcp.so 

@@ -1,1 +1,1 @@
-/usr/bin/g++ -O3 -DNDEBUG CMakeFiles/server.dir/test.cc.o -o ../../../test/testmuduo/server   -L/home/itach/code/project/mymuduo/test/testmuduo/./lib  -Wl,-rpath,/home/itach/code/project/mymuduo/test/testmuduo/./lib -lmuduo_net -lmuduo_base -lmuduo_http 
+/usr/bin/g++ -O3 -DNDEBUG CMakeFiles/server.dir/test.cc.o -o /home/itach/code/project/mymuduo/test/testmuduo/server   -L/home/itach/code/project/mymuduo/test/testmuduo/./lib  -Wl,-rpath,/home/itach/code/project/mymuduo/test/testmuduo/./lib -lmuduo_net -lmuduo_base -lmuduo_http 

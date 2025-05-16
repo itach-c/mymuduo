@@ -3,6 +3,7 @@
 #include <vector>
 #include <cassert>
 #include <string.h>
+#include <cstdint>
 
 /// +-------------------+------------------+------------------+
 /// | prependable bytes |  readable bytes  |  writable bytes  |

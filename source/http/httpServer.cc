@@ -158,7 +158,7 @@ void HttpServer::OnMessage(Connection::PtrConnection conn, Buffer *buffer)
         {
             if (context->GetRcvStatue() == HttpContext::RCV_OVER)
             {
-                std::cout << req.request_path_ << std::endl;
+             
                 if (util::isValidPath(req.request_path_) == false)
                 {
                     Handle404(&resp);
@@ -231,7 +231,7 @@ bool HttpServer::isStaticRequest(HttpRequest &req, HttpResPonse *resp)
         req.request_path_ += "index.html";
         return true;
     }
-    if (util::isRegular(req.request_path_) == false)
+    if (util::isRegular(basedir_ + req.request_path_) == false)
     {
         return false;
     }

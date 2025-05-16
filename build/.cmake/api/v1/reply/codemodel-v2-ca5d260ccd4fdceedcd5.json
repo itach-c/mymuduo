@@ -182,14 +182,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "http::@8508c0962b1722914d0d",
-					"jsonFile" : "target-http-Debug-f7a1306efe70bf9b5e98.json",
+					"jsonFile" : "target-http-Debug-73bf42bcb7b4e3ed7639.json",
 					"name" : "http",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "httpserver::@8ffc1ceb077bfa852aa0",
-					"jsonFile" : "target-httpserver-Debug-dea9345e336fcbc5033e.json",
+					"jsonFile" : "target-httpserver-Debug-f9e988a89b7a3204b6d0.json",
 					"name" : "httpserver",
 					"projectIndex" : 3
 				},
@@ -210,7 +210,7 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "tcpserver::@b6ac9c8efb780c17d0d8",
-					"jsonFile" : "target-tcpserver-Debug-a8313f237f15ccd86668.json",
+					"jsonFile" : "target-tcpserver-Debug-bb4a07cf2cdf076ad599.json",
 					"name" : "tcpserver",
 					"projectIndex" : 5
 				}
@@ -226,6 +226,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 6
 	}
 }

@@ -11,10 +11,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/itach/code/project/mymuduo/test/testHTTP/test1.cc" "test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o" "gcc" "test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/itach/code/project/mymuduo/build/source/http/CMakeFiles/http.dir/DependInfo.cmake"
-  "/home/itach/code/project/mymuduo/build/source/tcp/CMakeFiles/tcp.dir/DependInfo.cmake"
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
