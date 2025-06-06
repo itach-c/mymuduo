@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/tcpserver.dir/server.cc.o -o /home/itach/code/project/mymuduo/test/testTcp/tcpserver  -Wl,-rpath,/home/itach/code/project/mymuduo/lib /home/itach/code/project/mymuduo/lib/libtcp.so 
+/usr/bin/c++ CMakeFiles/tcpserver.dir/server.cc.o -o /home/itach/code/c++code/project/mymuduo/test/testTcp/tcpserver  -Wl,-rpath,/home/itach/code/c++code/project/mymuduo/lib /home/itach/code/c++code/project/mymuduo/lib/libtcp.so 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/itach/code/project/mymuduo/test/testTcp/tcpserver"
-  "/home/itach/code/project/mymuduo/test/testTcp/tcpserver.pdb"
+  "/home/itach/code/c++code/project/mymuduo/test/testTcp/tcpserver"
+  "/home/itach/code/c++code/project/mymuduo/test/testTcp/tcpserver.pdb"
   "CMakeFiles/tcpserver.dir/server.cc.o"
   "CMakeFiles/tcpserver.dir/server.cc.o.d"
 )

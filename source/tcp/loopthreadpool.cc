@@ -29,6 +29,6 @@ EventLoop *LoopThreadPool::NextLoop()
         return baseloop_;
     EventLoop *next = loops_[next_idx_];
     next_idx_ = (next_idx_ + 1) % loopthread_num_;
-
+    LOG_DEBUG("next %d ",next_idx_);
     return next;
 };

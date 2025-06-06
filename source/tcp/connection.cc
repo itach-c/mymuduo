@@ -21,23 +21,26 @@ void Connection::HandleRead()
 {
     // 1 .接受socket数据放到缓冲区
     // 2.调用 onmessage;
-    char buf[65535];
-    int n = socket_.NonBlockRecv(buf, sizeof(buf));
-    if (n < 0)
+   //  printf("fd %d 连接的读回调触发,准备调用山层 tcp 回调 tid %u\n",sockfd_,gettid());
+    while (true)
     {
-        if (errno == EAGAIN || EINTR)
-            return;
-        else
-            return ShutDown();
+        char buf[65535];
+        int n = socket_.NonBlockRecv(buf, sizeof(buf));
+        if (n < 0)
+        {
+            if (errno == EAGAIN || errno == EINTR)
+                break;
+            else
+                return ShutDown();
+        }
+        else if (n == 0)
+        {
+            return HandleClose();
+        }
+        inbuffer_.Write(buf, n);
     }
-    else if (n == 0)
-    {
-        return;
-    }
-    inbuffer_.Write(buf, n);
     if (inbuffer_.ReadAbleBytes() > 0)
     {
-
         return message_callback_(shared_from_this(), &inbuffer_);
     }
 }
@@ -50,12 +53,18 @@ void Connection::HandleWrite()
     ssize_t n = socket_.NonBlockSend(outbuffer_.ReadPosition(), outbuffer_.ReadAbleBytes());
     if (n < 0)
     {
-        // 发送错误要关闭连接了
-        if (inbuffer_.ReadAbleBytes() > 0)
+        if (errno == EAGAIN || errno == EINTR)
         {
-            message_callback_(shared_from_this(), &inbuffer_);
+            // 写缓冲满或者被信号中断，暂时不能写了，直接返回等待下次写事件
+            return;
         }
-        return relese();
+        else
+        {
+            // 其他错误，关闭连接
+            if (inbuffer_.ReadAbleBytes() > 0)
+                message_callback_(shared_from_this(), &inbuffer_);
+            return relese();
+        }
     }
     outbuffer_.MoveReadOffset(n);
 
@@ -137,7 +146,7 @@ void Connection::ShutDown()
     }
     else
     {
-        loop_->RunInLoop(std::bind(&Connection::ShutDownInLoop, this));
+        loop_->RunInLoop(std::bind(&Connection::ShutDownInLoop, shared_from_this()));
     }
 }
 
@@ -162,7 +171,7 @@ void Connection::CancelInactiveDistroy()
     }
     else
     {
-        loop_->RunInLoop(std::bind(&Connection::CancelInactiveDistroyInLoop, this));
+        loop_->RunInLoop(std::bind(&Connection::CancelInactiveDistroyInLoop, shared_from_this()));
     }
 }
 // 切换协议并更新回调
@@ -191,7 +200,8 @@ void Connection::UpGradeInLoop(std::any context, const ConnectionCallBack &connc
 void Connection::releseInLoop()
 {
     // 修改连接状态,将其置为disconnectioned
-
+    if (statu_ == DISCONNECTED)
+        return;
     statu_ = DISCONNECTED;
     // 移除事件监控 关闭描述符
     channel_.DisAbleAll();
@@ -214,10 +224,10 @@ void Connection::releseInLoop()
 
 void Connection::relese()
 {
-    if (statu_ = DISCONNECTED)
+    if (statu_ == DISCONNECTED)
         return;
 
-    return loop_->QueueInLoop(std::bind(&Connection::releseInLoop, this));
+    return loop_->QueueInLoop(std::bind(&Connection::releseInLoop, shared_from_this()));
 }
 
 // 给一个 channel 设置回调并启动监控
@@ -243,7 +253,7 @@ void Connection::Established()
     else
     {
 
-        loop_->RunInLoop(std::bind(&Connection::EstablishedInLoop, this));
+        loop_->RunInLoop(std::bind(&Connection::EstablishedInLoop, shared_from_this()));
     }
 }
 
@@ -264,13 +274,14 @@ void Connection::SendInLoop(std::string str)
 // 发送数据
 void Connection::Send(const char *data, size_t len)
 {
+    
     if (loop_->IsInLoop())
     {
         SendInLoop(std::string(data, data + len));
     }
     else
     {
-        loop_->RunInLoop(std::bind(&Connection::SendInLoop, this, std::string(data, data + len)));
+        loop_->RunInLoop(std::bind(&Connection::SendInLoop, shared_from_this(), std::string(data, data + len)));
     }
 }
 // 启用在指定时间内销毁连接
@@ -283,7 +294,7 @@ void Connection::EnableInactiveDistroyInLoop(int second)
     }
     else
     {
-        loop_->TimerAdd(timerid_, second, std::bind(&Connection::relese, this));
+        loop_->TimerAdd(timerid_, second, std::bind(&Connection::relese, shared_from_this()));
     }
 }
 
@@ -297,6 +308,6 @@ void Connection::EnableInactiveDistroy(int second)
     }
     else
     {
-        loop_->RunInLoop(std::bind(&Connection::EnableInactiveDistroyInLoop, this, second));
+        loop_->RunInLoop(std::bind(&Connection::EnableInactiveDistroyInLoop, shared_from_this(), second));
     }
 }

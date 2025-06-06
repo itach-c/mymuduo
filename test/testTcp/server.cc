@@ -113,7 +113,7 @@
 // void OnMessage(Connection::PtrConnection conn, Buffer *buffer)
 // {
 //     std::cout << "读事件触发" << std::endl;
-//     std::cout << "tid: ---------" << gettid() << std::endl; 
+//     std::cout << "tid: ---------" << gettid() << std::endl;
 
 //     std::string str = buffer->ReadAsString(buffer->ReadAbleBytes());
 //     std::cout << str.c_str() << std::endl;
@@ -136,7 +136,7 @@
 
 // void Accptor(int newfd)
 // {
- 
+
 //     nextloop = (nextloop+1) % 2 ;
 //     std::cout << "获得一个新连接 newfd : " << newfd << std::endl;
 //     std::cout << "tid :-----------------------" << gettid() << std::endl;
@@ -160,7 +160,7 @@
 // {
 
 //     // Poller poller;
-  
+
 //     // Socket list_sock;
 //     // list_sock.CreatListenSocket("127.0.0.1", 8888);
 //     // list_sock.ReuseAddress();
@@ -169,64 +169,58 @@
 //     acceptor.SetNewConnectionCallback(std::bind(Accptor,std::placeholders::_1));
 
 //    loop.Start();
-    
 
 //     return 0;
 // }
-
-
-
 
 #include "../../source/tcp/tcpserver.h"
 
 void OnConnection(Connection::PtrConnection conn)
 {
-    //std::cout << "get a new connection" << std::endl;
    
+
     LOG_INFO("conn address %p", conn.get());
 }
 void OnMessage(Connection::PtrConnection conn, Buffer *buffer)
 {
-   // std::cout << "读事件触发" << std::endl;
-    
-
+  //  std::cout << "处理线程tid: " << gettid() << std::endl;
+   //std::cout << "读事件触发" << std::endl;
     std::string str = buffer->ReadAsString(buffer->ReadAbleBytes());
-    
-
-    // 构建 HTTP 响应报文
+    //std::cout << str << std::endl;
+    std::string body = "<html><body><h1>今天天气不错!</h1></body></html>";
     std::string data = "HTTP/1.1 200 OK\r\n";
     data += "Content-Type: text/html; charset=UTF-8\r\n";
-    data += "Content-Length: 41\r\n";
-    data += "Connection: close\r\n";  // 表示响应后关闭连接
-    data += "\r\n";  // 空行，分隔头部和正文
-    data += "<html><body><h1>今天天气不错!</h1></body></html>";
+    data += "Content-Length: " + std::to_string(body.size()) + "\r\n";
+    data += "Connection: close\r\n"; // 先用 close，方便调试
+    data += "\r\n";
+    data += body;
+    conn->Send(data .c_str(),data.size());
 
-    // 发送响应数据
-    conn->Send(data.c_str(), data.size());
-    conn ->ShutDown();
- 
+    conn->ShutDown();  // 不再关闭，支持持久连接
 }
 
 void OnEvent(Connection::PtrConnection)
 {
 
-  LOG_INFO("有一个事件");
+   // LOG_INFO("有一个事件");
 }
 void OnClose(Connection::PtrConnection conn)
 {
-    LOG_INFO("连接关闭");
-   
+   // LOG_INFO("连接关闭");
 }
- 
+
 int main()
 {
-    TcpServer server("0.0.0.0",8888,true);
-    server.SetThreadNum(3);
+    std::cout << "main tid: " << gettid() << std::endl; 
+    sleep(1);
+
+    TcpServer server("0.0.0.0", 8888, true);
+    server.SetThreadNum(4);
     server.SetOnConnectionCallBack(OnConnection);
     server.SetOnMessageCallBack(OnMessage);
     server.SetOnEventsCallBack(OnEvent);
     server.SetOnCloseCallBack(OnClose);
-   // server.EnableInactiveDistory(10);
+    // server.EnableInactiveDistory(10);
     server.Start();
 
     return 0;

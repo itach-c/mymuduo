@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/itach/code/project/mymuduo
+CMAKE_SOURCE_DIR = /home/itach/code/c++code/project/mymuduo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/itach/code/project/mymuduo/build
+CMAKE_BINARY_DIR = /home/itach/code/c++code/project/mymuduo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/itach/code/project/mymuduo/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles /home/itach/code/project/mymuduo/build/source/tcp//CMakeFiles/progress.marks
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 0
+	cd /home/itach/code/c++code/project/mymuduo/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles /home/itach/code/c++code/project/mymuduo/build/source/tcp//CMakeFiles/progress.marks
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/clean
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/preinstall
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/preinstall
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/itach/code/project/mymuduo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/itach/code/c++code/project/mymuduo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 source/tcp/CMakeFiles/tcp.dir/rule:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/CMakeFiles/tcp.dir/rule
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/CMakeFiles/tcp.dir/rule
 .PHONY : source/tcp/CMakeFiles/tcp.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ tcp: source/tcp/CMakeFiles/tcp.dir/rule
 
 # fast build rule for target.
 tcp/fast:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/build
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/build
 .PHONY : tcp/fast
 
 acceptor.o: acceptor.cc.o
@@ -135,7 +135,7 @@ acceptor.o: acceptor.cc.o
 
 # target to build an object file
 acceptor.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o
 .PHONY : acceptor.cc.o
 
 acceptor.i: acceptor.cc.i
@@ -143,7 +143,7 @@ acceptor.i: acceptor.cc.i
 
 # target to preprocess a source file
 acceptor.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/acceptor.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/acceptor.cc.i
 .PHONY : acceptor.cc.i
 
 acceptor.s: acceptor.cc.s
@@ -151,7 +151,7 @@ acceptor.s: acceptor.cc.s
 
 # target to generate assembly for a file
 acceptor.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/acceptor.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/acceptor.cc.s
 .PHONY : acceptor.cc.s
 
 buffer.o: buffer.cc.o
@@ -159,7 +159,7 @@ buffer.o: buffer.cc.o
 
 # target to build an object file
 buffer.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/buffer.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/buffer.cc.o
 .PHONY : buffer.cc.o
 
 buffer.i: buffer.cc.i
@@ -167,7 +167,7 @@ buffer.i: buffer.cc.i
 
 # target to preprocess a source file
 buffer.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/buffer.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/buffer.cc.i
 .PHONY : buffer.cc.i
 
 buffer.s: buffer.cc.s
@@ -175,7 +175,7 @@ buffer.s: buffer.cc.s
 
 # target to generate assembly for a file
 buffer.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/buffer.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/buffer.cc.s
 .PHONY : buffer.cc.s
 
 channel.o: channel.cc.o
@@ -183,7 +183,7 @@ channel.o: channel.cc.o
 
 # target to build an object file
 channel.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/channel.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/channel.cc.o
 .PHONY : channel.cc.o
 
 channel.i: channel.cc.i
@@ -191,7 +191,7 @@ channel.i: channel.cc.i
 
 # target to preprocess a source file
 channel.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/channel.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/channel.cc.i
 .PHONY : channel.cc.i
 
 channel.s: channel.cc.s
@@ -199,7 +199,7 @@ channel.s: channel.cc.s
 
 # target to generate assembly for a file
 channel.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/channel.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/channel.cc.s
 .PHONY : channel.cc.s
 
 connection.o: connection.cc.o
@@ -207,7 +207,7 @@ connection.o: connection.cc.o
 
 # target to build an object file
 connection.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/connection.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/connection.cc.o
 .PHONY : connection.cc.o
 
 connection.i: connection.cc.i
@@ -215,7 +215,7 @@ connection.i: connection.cc.i
 
 # target to preprocess a source file
 connection.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/connection.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/connection.cc.i
 .PHONY : connection.cc.i
 
 connection.s: connection.cc.s
@@ -223,7 +223,7 @@ connection.s: connection.cc.s
 
 # target to generate assembly for a file
 connection.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/connection.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/connection.cc.s
 .PHONY : connection.cc.s
 
 eventloop.o: eventloop.cc.o
@@ -231,7 +231,7 @@ eventloop.o: eventloop.cc.o
 
 # target to build an object file
 eventloop.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o
 .PHONY : eventloop.cc.o
 
 eventloop.i: eventloop.cc.i
@@ -239,7 +239,7 @@ eventloop.i: eventloop.cc.i
 
 # target to preprocess a source file
 eventloop.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/eventloop.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/eventloop.cc.i
 .PHONY : eventloop.cc.i
 
 eventloop.s: eventloop.cc.s
@@ -247,7 +247,7 @@ eventloop.s: eventloop.cc.s
 
 # target to generate assembly for a file
 eventloop.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/eventloop.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/eventloop.cc.s
 .PHONY : eventloop.cc.s
 
 loopthread.o: loopthread.cc.o
@@ -255,7 +255,7 @@ loopthread.o: loopthread.cc.o
 
 # target to build an object file
 loopthread.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o
 .PHONY : loopthread.cc.o
 
 loopthread.i: loopthread.cc.i
@@ -263,7 +263,7 @@ loopthread.i: loopthread.cc.i
 
 # target to preprocess a source file
 loopthread.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthread.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthread.cc.i
 .PHONY : loopthread.cc.i
 
 loopthread.s: loopthread.cc.s
@@ -271,7 +271,7 @@ loopthread.s: loopthread.cc.s
 
 # target to generate assembly for a file
 loopthread.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthread.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthread.cc.s
 .PHONY : loopthread.cc.s
 
 loopthreadpool.o: loopthreadpool.cc.o
@@ -279,7 +279,7 @@ loopthreadpool.o: loopthreadpool.cc.o
 
 # target to build an object file
 loopthreadpool.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o
 .PHONY : loopthreadpool.cc.o
 
 loopthreadpool.i: loopthreadpool.cc.i
@@ -287,7 +287,7 @@ loopthreadpool.i: loopthreadpool.cc.i
 
 # target to preprocess a source file
 loopthreadpool.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.i
 .PHONY : loopthreadpool.cc.i
 
 loopthreadpool.s: loopthreadpool.cc.s
@@ -295,7 +295,7 @@ loopthreadpool.s: loopthreadpool.cc.s
 
 # target to generate assembly for a file
 loopthreadpool.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.s
 .PHONY : loopthreadpool.cc.s
 
 poller.o: poller.cc.o
@@ -303,7 +303,7 @@ poller.o: poller.cc.o
 
 # target to build an object file
 poller.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/poller.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/poller.cc.o
 .PHONY : poller.cc.o
 
 poller.i: poller.cc.i
@@ -311,7 +311,7 @@ poller.i: poller.cc.i
 
 # target to preprocess a source file
 poller.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/poller.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/poller.cc.i
 .PHONY : poller.cc.i
 
 poller.s: poller.cc.s
@@ -319,7 +319,7 @@ poller.s: poller.cc.s
 
 # target to generate assembly for a file
 poller.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/poller.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/poller.cc.s
 .PHONY : poller.cc.s
 
 socket.o: socket.cc.o
@@ -327,7 +327,7 @@ socket.o: socket.cc.o
 
 # target to build an object file
 socket.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/socket.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/socket.cc.o
 .PHONY : socket.cc.o
 
 socket.i: socket.cc.i
@@ -335,7 +335,7 @@ socket.i: socket.cc.i
 
 # target to preprocess a source file
 socket.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/socket.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/socket.cc.i
 .PHONY : socket.cc.i
 
 socket.s: socket.cc.s
@@ -343,7 +343,7 @@ socket.s: socket.cc.s
 
 # target to generate assembly for a file
 socket.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/socket.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/socket.cc.s
 .PHONY : socket.cc.s
 
 tcpserver.o: tcpserver.cc.o
@@ -351,7 +351,7 @@ tcpserver.o: tcpserver.cc.o
 
 # target to build an object file
 tcpserver.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o
 .PHONY : tcpserver.cc.o
 
 tcpserver.i: tcpserver.cc.i
@@ -359,7 +359,7 @@ tcpserver.i: tcpserver.cc.i
 
 # target to preprocess a source file
 tcpserver.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.i
 .PHONY : tcpserver.cc.i
 
 tcpserver.s: tcpserver.cc.s
@@ -367,7 +367,7 @@ tcpserver.s: tcpserver.cc.s
 
 # target to generate assembly for a file
 tcpserver.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.s
 .PHONY : tcpserver.cc.s
 
 timewheel.o: timewheel.cc.o
@@ -375,7 +375,7 @@ timewheel.o: timewheel.cc.o
 
 # target to build an object file
 timewheel.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o
 .PHONY : timewheel.cc.o
 
 timewheel.i: timewheel.cc.i
@@ -383,7 +383,7 @@ timewheel.i: timewheel.cc.i
 
 # target to preprocess a source file
 timewheel.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/timewheel.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/timewheel.cc.i
 .PHONY : timewheel.cc.i
 
 timewheel.s: timewheel.cc.s
@@ -391,7 +391,7 @@ timewheel.s: timewheel.cc.s
 
 # target to generate assembly for a file
 timewheel.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/timewheel.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/timewheel.cc.s
 .PHONY : timewheel.cc.s
 
 # Help Target
@@ -447,6 +447,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/itach/code/project/mymuduo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/itach/code/c++code/project/mymuduo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

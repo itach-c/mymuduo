@@ -116,10 +116,10 @@ ssize_t Socket::Send(const void *buf, size_t len, int flag)
     {
         if (errno == EAGAIN || errno == EINTR)
         {
-            return 0;
+            return ret;
         }
         LOG_ERROR("SOCKET SEND FAILED!!");
-        return -1;
+        return ret;
     }
     return ret;
 }

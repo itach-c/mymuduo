@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/itach/code/project/mymuduo
+CMAKE_SOURCE_DIR = /home/itach/code/c++code/project/mymuduo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/itach/code/project/mymuduo/build
+CMAKE_BINARY_DIR = /home/itach/code/c++code/project/mymuduo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/itach/code/project/mymuduo/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles /home/itach/code/project/mymuduo/build/test/testTcp//CMakeFiles/progress.marks
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 0
+	cd /home/itach/code/c++code/project/mymuduo/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles /home/itach/code/c++code/project/mymuduo/build/test/testTcp//CMakeFiles/progress.marks
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/clean
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/preinstall
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/preinstall
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/itach/code/project/mymuduo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/itach/code/c++code/project/mymuduo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/testTcp/CMakeFiles/tcpserver.dir/rule:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/CMakeFiles/tcpserver.dir/rule
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/CMakeFiles/tcpserver.dir/rule
 .PHONY : test/testTcp/CMakeFiles/tcpserver.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ tcpserver: test/testTcp/CMakeFiles/tcpserver.dir/rule
 
 # fast build rule for target.
 tcpserver/fast:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f test/testTcp/CMakeFiles/tcpserver.dir/build.make test/testTcp/CMakeFiles/tcpserver.dir/build
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f test/testTcp/CMakeFiles/tcpserver.dir/build.make test/testTcp/CMakeFiles/tcpserver.dir/build
 .PHONY : tcpserver/fast
 
 server.o: server.cc.o
@@ -135,7 +135,7 @@ server.o: server.cc.o
 
 # target to build an object file
 server.cc.o:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f test/testTcp/CMakeFiles/tcpserver.dir/build.make test/testTcp/CMakeFiles/tcpserver.dir/server.cc.o
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f test/testTcp/CMakeFiles/tcpserver.dir/build.make test/testTcp/CMakeFiles/tcpserver.dir/server.cc.o
 .PHONY : server.cc.o
 
 server.i: server.cc.i
@@ -143,7 +143,7 @@ server.i: server.cc.i
 
 # target to preprocess a source file
 server.cc.i:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f test/testTcp/CMakeFiles/tcpserver.dir/build.make test/testTcp/CMakeFiles/tcpserver.dir/server.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f test/testTcp/CMakeFiles/tcpserver.dir/build.make test/testTcp/CMakeFiles/tcpserver.dir/server.cc.i
 .PHONY : server.cc.i
 
 server.s: server.cc.s
@@ -151,7 +151,7 @@ server.s: server.cc.s
 
 # target to generate assembly for a file
 server.cc.s:
-	cd /home/itach/code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f test/testTcp/CMakeFiles/tcpserver.dir/build.make test/testTcp/CMakeFiles/tcpserver.dir/server.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build && $(MAKE) $(MAKESILENT) -f test/testTcp/CMakeFiles/tcpserver.dir/build.make test/testTcp/CMakeFiles/tcpserver.dir/server.cc.s
 .PHONY : server.cc.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/itach/code/project/mymuduo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/itach/code/c++code/project/mymuduo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

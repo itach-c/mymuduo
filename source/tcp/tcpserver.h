@@ -18,19 +18,22 @@ class TcpServer
     using EventCallBack = std::function<void(Connection::PtrConnection)>;
 
 public:
-    TcpServer(const std::string &ip, uint32_t port,bool portReuse = false);
+    TcpServer(const std::string &ip, uint32_t port, bool portReuse = false);
     ~TcpServer();
-    void SetThreadNum(int num) { threadnum_ = num;};
+    void SetThreadNum(int num) { threadnum_ = num; };
     void Start();
 
-    void EnableInactiveDistory(int timeout){ timeout_ = timeout;
-    enable_inactive_distory_ = true; }
+    void EnableInactiveDistory(int timeout)
+    {
+        timeout_ = timeout;
+        enable_inactive_distory_ = true;
+    }
 
     void SetOnMessageCallBack(const MessageCallBack &cb) { message_callback_ = cb; }
 
     void SetOnConnectionCallBack(const ConnectionCallBack &cb) { connect_callback_ = cb; }
 
-    void SetOnEventsCallBack(const EventCallBack &cb) {event_callback_ = cb;}
+    void SetOnEventsCallBack(const EventCallBack &cb) { event_callback_ = cb; }
 
     void SetOnCloseCallBack(const CloseCallBack &cb) { close_callback_ = cb; }
 
@@ -38,16 +41,13 @@ public:
 
 public:
 private:
-
     void NewConnection(int fd);
 
-    void ReMoveConnection(const Connection::PtrConnection& conn);
+    void ReMoveConnection(const Connection::PtrConnection &conn);
 
-    void ReMoveConnectionInLoop(const Connection::PtrConnection& conn);
+    void ReMoveConnectionInLoop(const Connection::PtrConnection &conn);
 
     void RunAfterInLoop(const Functor &task, int delay);
-
-   
 
 private:
     EventLoop baseloop_; // 主线程中运行的 eventloop
@@ -62,8 +62,7 @@ private:
 
     CloseCallBack close_callback_; // 连接关闭回调
 
-     EventCallBack event_callback_;
-
+    EventCallBack event_callback_;
 
     Acceptor acceptor_; // 连接管理器只负责监听连接
 
@@ -76,14 +75,12 @@ private:
     bool enable_inactive_distory_; // 启动非活跃销毁
 };
 
-
 class NetWork
 {
-    public:
+public:
     NetWork()
     {
         LOG_DEBUG("SIGPIPE INT");
-        signal( SIGPIPE,SIG_IGN);
+        signal(SIGPIPE, SIG_IGN);
     }
-
 };

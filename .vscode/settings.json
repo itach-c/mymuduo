@@ -75,6 +75,13 @@
         "coroutine": "cpp",
         "unordered_set": "cpp",
         "source_location": "cpp",
-        "future": "cpp"
+        "future": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "charconv": "cpp",
+        "forward_list": "cpp",
+        "format": "cpp",
+        "span": "cpp",
+        "shared_mutex": "cpp"
     }
 }

@@ -33,15 +33,16 @@ std::string strRequest(const HttpRequest &req)
 
     // 头部结束后添加一个空行
     resp << "\r\n";
- std::cout << resp.str() << std::endl;
+ //std::cout << resp.str() << std::endl;
     return resp.str();
 }
 
 void hello(const HttpRequest &req, HttpResPonse *resp)
 {
     std::string str = strRequest(req);
-    std::cout << str << std::endl;
+    //std::cout << str << std::endl;
     resp->SetContent(str,"text/plain");
+
 }
 void putfile(const HttpRequest &req, HttpResPonse *resp)
 {
@@ -66,7 +67,7 @@ int main()
     //server.EnableInactiveDestroy(5);
     server.SetBaseDir("./wwwroot");
 
-    server.SetThreadNum(3);
+    server.SetThreadNum(4);
     server.Get("/hello", std::move(hello));
     server.Put("/putfile", std::move(putfile));
     server.Post("/post", std::move(post));

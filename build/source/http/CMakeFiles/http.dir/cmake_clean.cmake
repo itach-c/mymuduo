@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/itach/code/project/mymuduo/lib/libhttp.pdb"
-  "/home/itach/code/project/mymuduo/lib/libhttp.so"
+  "/home/itach/code/c++code/project/mymuduo/lib/libhttp.pdb"
+  "/home/itach/code/c++code/project/mymuduo/lib/libhttp.so"
   "CMakeFiles/http.dir/httpServer.cc.o"
   "CMakeFiles/http.dir/httpServer.cc.o.d"
 )

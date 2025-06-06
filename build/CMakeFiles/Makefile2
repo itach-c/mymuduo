@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/itach/code/project/mymuduo
+CMAKE_SOURCE_DIR = /home/itach/code/c++code/project/mymuduo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/itach/code/project/mymuduo/build
+CMAKE_BINARY_DIR = /home/itach/code/c++code/project/mymuduo/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -168,14 +168,14 @@ test/testmuduo/clean: test/testmuduo/CMakeFiles/server.dir/clean
 source/http/CMakeFiles/http.dir/all: source/tcp/CMakeFiles/tcp.dir/all
 	$(MAKE) $(MAKESILENT) -f source/http/CMakeFiles/http.dir/build.make source/http/CMakeFiles/http.dir/depend
 	$(MAKE) $(MAKESILENT) -f source/http/CMakeFiles/http.dir/build.make source/http/CMakeFiles/http.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=1,2 "Built target http"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=1,2 "Built target http"
 .PHONY : source/http/CMakeFiles/http.dir/all
 
 # Build rule for subdir invocation for target.
 source/http/CMakeFiles/http.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/http/CMakeFiles/http.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 0
 .PHONY : source/http/CMakeFiles/http.dir/rule
 
 # Convenience name for target.
@@ -194,14 +194,14 @@ source/http/CMakeFiles/http.dir/clean:
 source/tcp/CMakeFiles/tcp.dir/all:
 	$(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/depend
 	$(MAKE) $(MAKESILENT) -f source/tcp/CMakeFiles/tcp.dir/build.make source/tcp/CMakeFiles/tcp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18 "Built target tcp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18 "Built target tcp"
 .PHONY : source/tcp/CMakeFiles/tcp.dir/all
 
 # Build rule for subdir invocation for target.
 source/tcp/CMakeFiles/tcp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/tcp/CMakeFiles/tcp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 0
 .PHONY : source/tcp/CMakeFiles/tcp.dir/rule
 
 # Convenience name for target.
@@ -221,14 +221,14 @@ test/testHTTP/CMakeFiles/httpserver.dir/all: source/http/CMakeFiles/http.dir/all
 test/testHTTP/CMakeFiles/httpserver.dir/all: source/tcp/CMakeFiles/tcp.dir/all
 	$(MAKE) $(MAKESILENT) -f test/testHTTP/CMakeFiles/httpserver.dir/build.make test/testHTTP/CMakeFiles/httpserver.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/testHTTP/CMakeFiles/httpserver.dir/build.make test/testHTTP/CMakeFiles/httpserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=3,4 "Built target httpserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=3,4 "Built target httpserver"
 .PHONY : test/testHTTP/CMakeFiles/httpserver.dir/all
 
 # Build rule for subdir invocation for target.
 test/testHTTP/CMakeFiles/httpserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testHTTP/CMakeFiles/httpserver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 0
 .PHONY : test/testHTTP/CMakeFiles/httpserver.dir/rule
 
 # Convenience name for target.
@@ -247,14 +247,14 @@ test/testHTTP/CMakeFiles/httpserver.dir/clean:
 test/testmuduo/CMakeFiles/server.dir/all:
 	$(MAKE) $(MAKESILENT) -f test/testmuduo/CMakeFiles/server.dir/build.make test/testmuduo/CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/testmuduo/CMakeFiles/server.dir/build.make test/testmuduo/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=5,6 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=5,6 "Built target server"
 .PHONY : test/testmuduo/CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
 test/testmuduo/CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testmuduo/CMakeFiles/server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 0
 .PHONY : test/testmuduo/CMakeFiles/server.dir/rule
 
 # Convenience name for target.
@@ -273,14 +273,14 @@ test/testmuduo/CMakeFiles/server.dir/clean:
 test/testTcp/CMakeFiles/tcpserver.dir/all: source/tcp/CMakeFiles/tcp.dir/all
 	$(MAKE) $(MAKESILENT) -f test/testTcp/CMakeFiles/tcpserver.dir/build.make test/testTcp/CMakeFiles/tcpserver.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/testTcp/CMakeFiles/tcpserver.dir/build.make test/testTcp/CMakeFiles/tcpserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=19,20 "Built target tcpserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=19,20 "Built target tcpserver"
 .PHONY : test/testTcp/CMakeFiles/tcpserver.dir/all
 
 # Build rule for subdir invocation for target.
 test/testTcp/CMakeFiles/tcpserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/testTcp/CMakeFiles/tcpserver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/project/mymuduo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itach/code/c++code/project/mymuduo/build/CMakeFiles 0
 .PHONY : test/testTcp/CMakeFiles/tcpserver.dir/rule
 
 # Convenience name for target.

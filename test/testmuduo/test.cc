@@ -6,9 +6,12 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include "muduo/base/Logging.h"
 using namespace muduo::net;
 std::string strRequest(const HttpRequest &req)
 {
+
+  
     std::ostringstream resp;
 
     // 拼接请求行
@@ -29,6 +32,7 @@ std::string strRequest(const HttpRequest &req)
 
 void hello(const HttpRequest &req, HttpResponse *resp)
 {
+
     if(req.path() == "/hello")
     {
         std::string str = strRequest(req);
@@ -41,13 +45,14 @@ void hello(const HttpRequest &req, HttpResponse *resp)
 int main()
 {
 
+
     EventLoop loop;
+    muduo::Logger::setLogLevel(muduo::Logger::LogLevel::FATAL);
     HttpServer Server(&loop, InetAddress("0.0.0.0", 8888), "http", TcpServer::kReusePort);
-    Server.setThreadNum(3);
+    Server.setThreadNum(4);
     Server.setHttpCallback(hello);
     Server.start();
     loop.loop();
-
-
+    
     return 0;
 }

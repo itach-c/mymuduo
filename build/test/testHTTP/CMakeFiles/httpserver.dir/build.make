@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/itach/code/project/mymuduo
+CMAKE_SOURCE_DIR = /home/itach/code/c++code/project/mymuduo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/itach/code/project/mymuduo/build
+CMAKE_BINARY_DIR = /home/itach/code/c++code/project/mymuduo/build
 
 # Include any dependencies generated for this target.
 include test/testHTTP/CMakeFiles/httpserver.dir/depend.make
@@ -70,18 +70,18 @@ include test/testHTTP/CMakeFiles/httpserver.dir/progress.make
 include test/testHTTP/CMakeFiles/httpserver.dir/flags.make
 
 test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o: test/testHTTP/CMakeFiles/httpserver.dir/flags.make
-test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o: /home/itach/code/project/mymuduo/test/testHTTP/test1.cc
+test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o: /home/itach/code/c++code/project/mymuduo/test/testHTTP/test1.cc
 test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o: test/testHTTP/CMakeFiles/httpserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o"
-	cd /home/itach/code/project/mymuduo/build/test/testHTTP && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o -MF CMakeFiles/httpserver.dir/test1.cc.o.d -o CMakeFiles/httpserver.dir/test1.cc.o -c /home/itach/code/project/mymuduo/test/testHTTP/test1.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/test/testHTTP && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o -MF CMakeFiles/httpserver.dir/test1.cc.o.d -o CMakeFiles/httpserver.dir/test1.cc.o -c /home/itach/code/c++code/project/mymuduo/test/testHTTP/test1.cc
 
 test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/httpserver.dir/test1.cc.i"
-	cd /home/itach/code/project/mymuduo/build/test/testHTTP && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/test/testHTTP/test1.cc > CMakeFiles/httpserver.dir/test1.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/test/testHTTP && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/test/testHTTP/test1.cc > CMakeFiles/httpserver.dir/test1.cc.i
 
 test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/httpserver.dir/test1.cc.s"
-	cd /home/itach/code/project/mymuduo/build/test/testHTTP && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/test/testHTTP/test1.cc -o CMakeFiles/httpserver.dir/test1.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/test/testHTTP && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/test/testHTTP/test1.cc -o CMakeFiles/httpserver.dir/test1.cc.s
 
 # Object files for target httpserver
 httpserver_OBJECTS = \
@@ -90,23 +90,23 @@ httpserver_OBJECTS = \
 # External object files for target httpserver
 httpserver_EXTERNAL_OBJECTS =
 
-/home/itach/code/project/mymuduo/test/testHTTP/httpserver: test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o
-/home/itach/code/project/mymuduo/test/testHTTP/httpserver: test/testHTTP/CMakeFiles/httpserver.dir/build.make
-/home/itach/code/project/mymuduo/test/testHTTP/httpserver: /home/itach/code/project/mymuduo/lib/libhttp.so
-/home/itach/code/project/mymuduo/test/testHTTP/httpserver: /home/itach/code/project/mymuduo/lib/libtcp.so
-/home/itach/code/project/mymuduo/test/testHTTP/httpserver: test/testHTTP/CMakeFiles/httpserver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/itach/code/project/mymuduo/test/testHTTP/httpserver"
-	cd /home/itach/code/project/mymuduo/build/test/testHTTP && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/httpserver.dir/link.txt --verbose=$(VERBOSE)
+/home/itach/code/c++code/project/mymuduo/test/testHTTP/httpserver: test/testHTTP/CMakeFiles/httpserver.dir/test1.cc.o
+/home/itach/code/c++code/project/mymuduo/test/testHTTP/httpserver: test/testHTTP/CMakeFiles/httpserver.dir/build.make
+/home/itach/code/c++code/project/mymuduo/test/testHTTP/httpserver: /home/itach/code/c++code/project/mymuduo/lib/libhttp.so
+/home/itach/code/c++code/project/mymuduo/test/testHTTP/httpserver: /home/itach/code/c++code/project/mymuduo/lib/libtcp.so
+/home/itach/code/c++code/project/mymuduo/test/testHTTP/httpserver: test/testHTTP/CMakeFiles/httpserver.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/itach/code/c++code/project/mymuduo/test/testHTTP/httpserver"
+	cd /home/itach/code/c++code/project/mymuduo/build/test/testHTTP && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/httpserver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-test/testHTTP/CMakeFiles/httpserver.dir/build: /home/itach/code/project/mymuduo/test/testHTTP/httpserver
+test/testHTTP/CMakeFiles/httpserver.dir/build: /home/itach/code/c++code/project/mymuduo/test/testHTTP/httpserver
 .PHONY : test/testHTTP/CMakeFiles/httpserver.dir/build
 
 test/testHTTP/CMakeFiles/httpserver.dir/clean:
-	cd /home/itach/code/project/mymuduo/build/test/testHTTP && $(CMAKE_COMMAND) -P CMakeFiles/httpserver.dir/cmake_clean.cmake
+	cd /home/itach/code/c++code/project/mymuduo/build/test/testHTTP && $(CMAKE_COMMAND) -P CMakeFiles/httpserver.dir/cmake_clean.cmake
 .PHONY : test/testHTTP/CMakeFiles/httpserver.dir/clean
 
 test/testHTTP/CMakeFiles/httpserver.dir/depend:
-	cd /home/itach/code/project/mymuduo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/itach/code/project/mymuduo /home/itach/code/project/mymuduo/test/testHTTP /home/itach/code/project/mymuduo/build /home/itach/code/project/mymuduo/build/test/testHTTP /home/itach/code/project/mymuduo/build/test/testHTTP/CMakeFiles/httpserver.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/itach/code/c++code/project/mymuduo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/itach/code/c++code/project/mymuduo /home/itach/code/c++code/project/mymuduo/test/testHTTP /home/itach/code/c++code/project/mymuduo/build /home/itach/code/c++code/project/mymuduo/build/test/testHTTP /home/itach/code/c++code/project/mymuduo/build/test/testHTTP/CMakeFiles/httpserver.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : test/testHTTP/CMakeFiles/httpserver.dir/depend
 

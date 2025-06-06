@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/itach/code/project/mymuduo
+CMAKE_SOURCE_DIR = /home/itach/code/c++code/project/mymuduo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/itach/code/project/mymuduo/build
+CMAKE_BINARY_DIR = /home/itach/code/c++code/project/mymuduo/build
 
 # Include any dependencies generated for this target.
 include source/tcp/CMakeFiles/tcp.dir/depend.make
@@ -70,158 +70,158 @@ include source/tcp/CMakeFiles/tcp.dir/progress.make
 include source/tcp/CMakeFiles/tcp.dir/flags.make
 
 source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o: /home/itach/code/project/mymuduo/source/tcp/acceptor.cc
+source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/acceptor.cc
 source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o -MF CMakeFiles/tcp.dir/acceptor.cc.o.d -o CMakeFiles/tcp.dir/acceptor.cc.o -c /home/itach/code/project/mymuduo/source/tcp/acceptor.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o -MF CMakeFiles/tcp.dir/acceptor.cc.o.d -o CMakeFiles/tcp.dir/acceptor.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/acceptor.cc
 
 source/tcp/CMakeFiles/tcp.dir/acceptor.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/acceptor.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/acceptor.cc > CMakeFiles/tcp.dir/acceptor.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/acceptor.cc > CMakeFiles/tcp.dir/acceptor.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/acceptor.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/acceptor.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/acceptor.cc -o CMakeFiles/tcp.dir/acceptor.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/acceptor.cc -o CMakeFiles/tcp.dir/acceptor.cc.s
 
 source/tcp/CMakeFiles/tcp.dir/buffer.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/buffer.cc.o: /home/itach/code/project/mymuduo/source/tcp/buffer.cc
+source/tcp/CMakeFiles/tcp.dir/buffer.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/buffer.cc
 source/tcp/CMakeFiles/tcp.dir/buffer.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/tcp/CMakeFiles/tcp.dir/buffer.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/buffer.cc.o -MF CMakeFiles/tcp.dir/buffer.cc.o.d -o CMakeFiles/tcp.dir/buffer.cc.o -c /home/itach/code/project/mymuduo/source/tcp/buffer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/tcp/CMakeFiles/tcp.dir/buffer.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/buffer.cc.o -MF CMakeFiles/tcp.dir/buffer.cc.o.d -o CMakeFiles/tcp.dir/buffer.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/buffer.cc
 
 source/tcp/CMakeFiles/tcp.dir/buffer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/buffer.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/buffer.cc > CMakeFiles/tcp.dir/buffer.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/buffer.cc > CMakeFiles/tcp.dir/buffer.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/buffer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/buffer.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/buffer.cc -o CMakeFiles/tcp.dir/buffer.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/buffer.cc -o CMakeFiles/tcp.dir/buffer.cc.s
 
 source/tcp/CMakeFiles/tcp.dir/channel.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/channel.cc.o: /home/itach/code/project/mymuduo/source/tcp/channel.cc
+source/tcp/CMakeFiles/tcp.dir/channel.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/channel.cc
 source/tcp/CMakeFiles/tcp.dir/channel.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object source/tcp/CMakeFiles/tcp.dir/channel.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/channel.cc.o -MF CMakeFiles/tcp.dir/channel.cc.o.d -o CMakeFiles/tcp.dir/channel.cc.o -c /home/itach/code/project/mymuduo/source/tcp/channel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object source/tcp/CMakeFiles/tcp.dir/channel.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/channel.cc.o -MF CMakeFiles/tcp.dir/channel.cc.o.d -o CMakeFiles/tcp.dir/channel.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/channel.cc
 
 source/tcp/CMakeFiles/tcp.dir/channel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/channel.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/channel.cc > CMakeFiles/tcp.dir/channel.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/channel.cc > CMakeFiles/tcp.dir/channel.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/channel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/channel.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/channel.cc -o CMakeFiles/tcp.dir/channel.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/channel.cc -o CMakeFiles/tcp.dir/channel.cc.s
 
 source/tcp/CMakeFiles/tcp.dir/connection.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/connection.cc.o: /home/itach/code/project/mymuduo/source/tcp/connection.cc
+source/tcp/CMakeFiles/tcp.dir/connection.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/connection.cc
 source/tcp/CMakeFiles/tcp.dir/connection.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object source/tcp/CMakeFiles/tcp.dir/connection.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/connection.cc.o -MF CMakeFiles/tcp.dir/connection.cc.o.d -o CMakeFiles/tcp.dir/connection.cc.o -c /home/itach/code/project/mymuduo/source/tcp/connection.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object source/tcp/CMakeFiles/tcp.dir/connection.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/connection.cc.o -MF CMakeFiles/tcp.dir/connection.cc.o.d -o CMakeFiles/tcp.dir/connection.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/connection.cc
 
 source/tcp/CMakeFiles/tcp.dir/connection.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/connection.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/connection.cc > CMakeFiles/tcp.dir/connection.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/connection.cc > CMakeFiles/tcp.dir/connection.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/connection.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/connection.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/connection.cc -o CMakeFiles/tcp.dir/connection.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/connection.cc -o CMakeFiles/tcp.dir/connection.cc.s
 
 source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o: /home/itach/code/project/mymuduo/source/tcp/eventloop.cc
+source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/eventloop.cc
 source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o -MF CMakeFiles/tcp.dir/eventloop.cc.o.d -o CMakeFiles/tcp.dir/eventloop.cc.o -c /home/itach/code/project/mymuduo/source/tcp/eventloop.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o -MF CMakeFiles/tcp.dir/eventloop.cc.o.d -o CMakeFiles/tcp.dir/eventloop.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/eventloop.cc
 
 source/tcp/CMakeFiles/tcp.dir/eventloop.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/eventloop.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/eventloop.cc > CMakeFiles/tcp.dir/eventloop.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/eventloop.cc > CMakeFiles/tcp.dir/eventloop.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/eventloop.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/eventloop.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/eventloop.cc -o CMakeFiles/tcp.dir/eventloop.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/eventloop.cc -o CMakeFiles/tcp.dir/eventloop.cc.s
 
 source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o: /home/itach/code/project/mymuduo/source/tcp/loopthread.cc
+source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/loopthread.cc
 source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o -MF CMakeFiles/tcp.dir/loopthread.cc.o.d -o CMakeFiles/tcp.dir/loopthread.cc.o -c /home/itach/code/project/mymuduo/source/tcp/loopthread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o -MF CMakeFiles/tcp.dir/loopthread.cc.o.d -o CMakeFiles/tcp.dir/loopthread.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/loopthread.cc
 
 source/tcp/CMakeFiles/tcp.dir/loopthread.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/loopthread.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/loopthread.cc > CMakeFiles/tcp.dir/loopthread.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/loopthread.cc > CMakeFiles/tcp.dir/loopthread.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/loopthread.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/loopthread.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/loopthread.cc -o CMakeFiles/tcp.dir/loopthread.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/loopthread.cc -o CMakeFiles/tcp.dir/loopthread.cc.s
 
 source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o: /home/itach/code/project/mymuduo/source/tcp/loopthreadpool.cc
+source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/loopthreadpool.cc
 source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o -MF CMakeFiles/tcp.dir/loopthreadpool.cc.o.d -o CMakeFiles/tcp.dir/loopthreadpool.cc.o -c /home/itach/code/project/mymuduo/source/tcp/loopthreadpool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o -MF CMakeFiles/tcp.dir/loopthreadpool.cc.o.d -o CMakeFiles/tcp.dir/loopthreadpool.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/loopthreadpool.cc
 
 source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/loopthreadpool.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/loopthreadpool.cc > CMakeFiles/tcp.dir/loopthreadpool.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/loopthreadpool.cc > CMakeFiles/tcp.dir/loopthreadpool.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/loopthreadpool.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/loopthreadpool.cc -o CMakeFiles/tcp.dir/loopthreadpool.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/loopthreadpool.cc -o CMakeFiles/tcp.dir/loopthreadpool.cc.s
 
 source/tcp/CMakeFiles/tcp.dir/poller.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/poller.cc.o: /home/itach/code/project/mymuduo/source/tcp/poller.cc
+source/tcp/CMakeFiles/tcp.dir/poller.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/poller.cc
 source/tcp/CMakeFiles/tcp.dir/poller.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object source/tcp/CMakeFiles/tcp.dir/poller.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/poller.cc.o -MF CMakeFiles/tcp.dir/poller.cc.o.d -o CMakeFiles/tcp.dir/poller.cc.o -c /home/itach/code/project/mymuduo/source/tcp/poller.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object source/tcp/CMakeFiles/tcp.dir/poller.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/poller.cc.o -MF CMakeFiles/tcp.dir/poller.cc.o.d -o CMakeFiles/tcp.dir/poller.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/poller.cc
 
 source/tcp/CMakeFiles/tcp.dir/poller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/poller.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/poller.cc > CMakeFiles/tcp.dir/poller.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/poller.cc > CMakeFiles/tcp.dir/poller.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/poller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/poller.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/poller.cc -o CMakeFiles/tcp.dir/poller.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/poller.cc -o CMakeFiles/tcp.dir/poller.cc.s
 
 source/tcp/CMakeFiles/tcp.dir/socket.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/socket.cc.o: /home/itach/code/project/mymuduo/source/tcp/socket.cc
+source/tcp/CMakeFiles/tcp.dir/socket.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/socket.cc
 source/tcp/CMakeFiles/tcp.dir/socket.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object source/tcp/CMakeFiles/tcp.dir/socket.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/socket.cc.o -MF CMakeFiles/tcp.dir/socket.cc.o.d -o CMakeFiles/tcp.dir/socket.cc.o -c /home/itach/code/project/mymuduo/source/tcp/socket.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object source/tcp/CMakeFiles/tcp.dir/socket.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/socket.cc.o -MF CMakeFiles/tcp.dir/socket.cc.o.d -o CMakeFiles/tcp.dir/socket.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/socket.cc
 
 source/tcp/CMakeFiles/tcp.dir/socket.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/socket.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/socket.cc > CMakeFiles/tcp.dir/socket.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/socket.cc > CMakeFiles/tcp.dir/socket.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/socket.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/socket.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/socket.cc -o CMakeFiles/tcp.dir/socket.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/socket.cc -o CMakeFiles/tcp.dir/socket.cc.s
 
 source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o: /home/itach/code/project/mymuduo/source/tcp/tcpserver.cc
+source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/tcpserver.cc
 source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o -MF CMakeFiles/tcp.dir/tcpserver.cc.o.d -o CMakeFiles/tcp.dir/tcpserver.cc.o -c /home/itach/code/project/mymuduo/source/tcp/tcpserver.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o -MF CMakeFiles/tcp.dir/tcpserver.cc.o.d -o CMakeFiles/tcp.dir/tcpserver.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/tcpserver.cc
 
 source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/tcpserver.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/tcpserver.cc > CMakeFiles/tcp.dir/tcpserver.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/tcpserver.cc > CMakeFiles/tcp.dir/tcpserver.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/tcpserver.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/tcpserver.cc -o CMakeFiles/tcp.dir/tcpserver.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/tcpserver.cc -o CMakeFiles/tcp.dir/tcpserver.cc.s
 
 source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o: source/tcp/CMakeFiles/tcp.dir/flags.make
-source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o: /home/itach/code/project/mymuduo/source/tcp/timewheel.cc
+source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o: /home/itach/code/c++code/project/mymuduo/source/tcp/timewheel.cc
 source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o: source/tcp/CMakeFiles/tcp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o -MF CMakeFiles/tcp.dir/timewheel.cc.o.d -o CMakeFiles/tcp.dir/timewheel.cc.o -c /home/itach/code/project/mymuduo/source/tcp/timewheel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o -MF CMakeFiles/tcp.dir/timewheel.cc.o.d -o CMakeFiles/tcp.dir/timewheel.cc.o -c /home/itach/code/c++code/project/mymuduo/source/tcp/timewheel.cc
 
 source/tcp/CMakeFiles/tcp.dir/timewheel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp.dir/timewheel.cc.i"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/source/tcp/timewheel.cc > CMakeFiles/tcp.dir/timewheel.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/source/tcp/timewheel.cc > CMakeFiles/tcp.dir/timewheel.cc.i
 
 source/tcp/CMakeFiles/tcp.dir/timewheel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp.dir/timewheel.cc.s"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/source/tcp/timewheel.cc -o CMakeFiles/tcp.dir/timewheel.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/source/tcp/timewheel.cc -o CMakeFiles/tcp.dir/timewheel.cc.s
 
 # Object files for target tcp
 tcp_OBJECTS = \
@@ -240,31 +240,31 @@ tcp_OBJECTS = \
 # External object files for target tcp
 tcp_EXTERNAL_OBJECTS =
 
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/buffer.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/channel.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/connection.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/poller.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/socket.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/build.make
-/home/itach/code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library /home/itach/code/project/mymuduo/lib/libtcp.so"
-	cd /home/itach/code/project/mymuduo/build/source/tcp && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tcp.dir/link.txt --verbose=$(VERBOSE)
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/acceptor.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/buffer.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/channel.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/connection.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/eventloop.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/loopthread.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/loopthreadpool.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/poller.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/socket.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/tcpserver.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/timewheel.cc.o
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/build.make
+/home/itach/code/c++code/project/mymuduo/lib/libtcp.so: source/tcp/CMakeFiles/tcp.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library /home/itach/code/c++code/project/mymuduo/lib/libtcp.so"
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tcp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-source/tcp/CMakeFiles/tcp.dir/build: /home/itach/code/project/mymuduo/lib/libtcp.so
+source/tcp/CMakeFiles/tcp.dir/build: /home/itach/code/c++code/project/mymuduo/lib/libtcp.so
 .PHONY : source/tcp/CMakeFiles/tcp.dir/build
 
 source/tcp/CMakeFiles/tcp.dir/clean:
-	cd /home/itach/code/project/mymuduo/build/source/tcp && $(CMAKE_COMMAND) -P CMakeFiles/tcp.dir/cmake_clean.cmake
+	cd /home/itach/code/c++code/project/mymuduo/build/source/tcp && $(CMAKE_COMMAND) -P CMakeFiles/tcp.dir/cmake_clean.cmake
 .PHONY : source/tcp/CMakeFiles/tcp.dir/clean
 
 source/tcp/CMakeFiles/tcp.dir/depend:
-	cd /home/itach/code/project/mymuduo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/itach/code/project/mymuduo /home/itach/code/project/mymuduo/source/tcp /home/itach/code/project/mymuduo/build /home/itach/code/project/mymuduo/build/source/tcp /home/itach/code/project/mymuduo/build/source/tcp/CMakeFiles/tcp.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/itach/code/c++code/project/mymuduo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/itach/code/c++code/project/mymuduo /home/itach/code/c++code/project/mymuduo/source/tcp /home/itach/code/c++code/project/mymuduo/build /home/itach/code/c++code/project/mymuduo/build/source/tcp /home/itach/code/c++code/project/mymuduo/build/source/tcp/CMakeFiles/tcp.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : source/tcp/CMakeFiles/tcp.dir/depend
 

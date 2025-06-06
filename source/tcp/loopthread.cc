@@ -15,7 +15,6 @@ EventLoop *LoopThread::GetLoop()
 void LoopThread::ThreadEntry()
 {
     EventLoop loop;
-
     {
         std::unique_lock<std::mutex> lock(mtx_);
 

@@ -1,0 +1,231 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "source/http",
+					"jsonFile" : "directory-source.http-0ff07bc901254e298df9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "source/http",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "source/tcp",
+					"jsonFile" : "directory-source.tcp-145a074832bdcd236c75.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "source/tcp",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "test/testHTTP",
+					"jsonFile" : "directory-test.testHTTP-1b47197c96b66552cb33.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "test/testHTTP",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "test/testmuduo",
+					"jsonFile" : "directory-test.testmuduo-cf62e42b32c9be5b344e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "test/testmuduo",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "test/testTcp",
+					"jsonFile" : "directory-test.testTcp-31d21f93c7f8f56993d2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "test/testTcp",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "mymuduo"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "http",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "tcp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "testHttp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "testmuduo",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "testTcp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "http::@8508c0962b1722914d0d",
+					"jsonFile" : "target-http-7075330a4a4faa101475.json",
+					"name" : "http",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "httpserver::@8ffc1ceb077bfa852aa0",
+					"jsonFile" : "target-httpserver-859ce592bb872b410dfa.json",
+					"name" : "httpserver",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "server::@130c6cd72f1c691688ca",
+					"jsonFile" : "target-server-a652bf6940cd8affe5ae.json",
+					"name" : "server",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "tcp::@f5674b26ca1764bbc136",
+					"jsonFile" : "target-tcp-f6de85d585de691587e0.json",
+					"name" : "tcp",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "tcpserver::@b6ac9c8efb780c17d0d8",
+					"jsonFile" : "target-tcpserver-7d522fb626a9c3eba77c.json",
+					"name" : "tcpserver",
+					"projectIndex" : 5
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/itach/code/c++code/project/mymuduo/build",
+		"source" : "/home/itach/code/c++code/project/mymuduo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

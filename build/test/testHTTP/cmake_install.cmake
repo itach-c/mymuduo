@@ -1,4 +1,4 @@
-# Install script for directory: /home/itach/code/project/mymuduo/test/testHTTP
+# Install script for directory: /home/itach/code/c++code/project/mymuduo/test/testHTTP
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

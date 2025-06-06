@@ -43,7 +43,8 @@ public:
     bool HasTimer(uint64_t id) { return time_wheel_.Hastimer(id); }
 
     void AssertInLoop() { assert(thread_id_ == std::this_thread::get_id()); }
-
+    std::thread::id getId(){return thread_id_;}
+    
 private:
     std::thread::id thread_id_;
     int wakeupfd_; // 唤醒线程使用

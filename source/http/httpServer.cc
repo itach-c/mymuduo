@@ -53,33 +53,35 @@ void HttpServer::EnableInactiveDestroy(int timeout)
 void HttpServer::OnConnection(Connection::PtrConnection conn)
 {
     // 设置连接的上下文
-
     LOG_INFO("get a new connection %p", conn.get());
     conn->SetContext(HttpContext());
 }
-void HttpServer ::HandleError(HttpResPonse *resp)
-{
 
-    std::string body;
-    body += "<html>";
-    body += "<head>";
-    body += "<meta http-equiv='Content-Type' content='text/html;charset=utf-8'>";
-    body += "</head>";
-    body += "<body>";
-    body += "<h1>";
-    body += std::to_string(resp->GetStatusCode());
-    body += " ";
-    body += util::getStatusMessage(resp->GetStatusCode());
-    body += "</h1>";
-    body += "</body>";
-    body += "</html>";
-    resp->SetContent(body);
+void HttpServer::HandleError(HttpResPonse *resp)
+{
+    // 使用stringstream优化字符串拼接
+    std::ostringstream oss;
+    oss << "<html>"
+        << "<head>"
+        << "<meta http-equiv='Content-Type' content='text/html;charset=utf-8'>"
+        << "</head>"
+        << "<body>"
+        << "<h1>"
+        << resp->GetStatusCode()
+        << " "
+        << util::getStatusMessage(resp->GetStatusCode())
+        << "</h1>"
+        << "</body>"
+        << "</html>";
+    resp->SetContent(oss.str());
 }
 
-void HttpServer ::Handle404(HttpResPonse *resp)
+void HttpServer::Handle404(HttpResPonse *resp)
 {
     resp->SetStatueCode(404);
-    std::string html =
+    
+    // 使用预定义的常量HTML内容，避免每次请求都创建新字符串
+    static const std::string html =
         "<!DOCTYPE html>\n"
         "<html lang=\"en\">\n"
         "<head>\n"
@@ -129,26 +131,24 @@ void HttpServer ::Handle404(HttpResPonse *resp)
         "    </div>\n"
         "</body>\n"
         "</html>";
-        resp->SetContent(std::move(html));
+        
+    resp->SetContent(html);
 }
+
 void HttpServer::OnMessage(Connection::PtrConnection conn, Buffer *buffer)
 {
-
     while (buffer->ReadAbleBytes() > 0)
     {
-
-        // HttpContext context = std::any_cast<HttpContext>(*conn->GetContext());
-
         HttpContext *context = std::any_cast<HttpContext>(conn->GetContext());
         bool ret = context->Rcv_Context_HttpReq(buffer); // 尝试拿到一个http报文但是有可能是半个 一个 或者一个半...或者是一个错误的报文
         HttpRequest req = context->GetHttp();
         HttpResPonse resp(context->GetRespStatuCode());
         resp.SetVersion(req.version_);
+        
         if (context->GetRcvStatue() == HttpContext::RCV_ERROR)
         {
             // 报文错了直接关闭连接并清空缓冲区,给客户端响应一个错误信息和错误状态码
             HandleError(&resp); // handle Error中把错误直接发回去
-
             BuildResponseAndSend(conn, req, resp);
             buffer->Clear();
             conn->relese();
@@ -158,12 +158,12 @@ void HttpServer::OnMessage(Connection::PtrConnection conn, Buffer *buffer)
         {
             if (context->GetRcvStatue() == HttpContext::RCV_OVER)
             {
-             
                 if (util::isValidPath(req.request_path_) == false)
                 {
                     Handle404(&resp);
                     BuildResponseAndSend(conn, req, resp);
                     conn->ShutDown();
+                    return;
                 }
 
                 Route(req, &resp); // 根据请求方法去进行一下路由
@@ -174,16 +174,17 @@ void HttpServer::OnMessage(Connection::PtrConnection conn, Buffer *buffer)
             {
                 return; // 其余情况暂时先不关闭连接，如果后续数据到达接着组装解析，如果超过非活跃连接断开，那自动关闭
             }
-           // if (req.isShortConnection() == true)
-                conn->ShutDown();
+            // if (req.isShortConnection() == true)
+            conn->ShutDown();
         }
+
     }
+    conn->ShutDown();
 }
 
 void HttpServer::Route(HttpRequest &req, HttpResPonse *resp)
 {
     // 路由请求处理 判断请求的是静态资源 还是功能路由
-
     if (req.method_ == "GET" || req.method_ == "HEAD")
     {
         bool ret = isStaticRequest(req, resp);
@@ -193,6 +194,7 @@ void HttpServer::Route(HttpRequest &req, HttpResPonse *resp)
             return;
         }
     }
+    
     // 功能路由
     if (req.method_ == "GET" || req.method_ == "HEAD")
     {
@@ -212,12 +214,13 @@ void HttpServer::Route(HttpRequest &req, HttpResPonse *resp)
     }
     else
     {
-        return resp->SetStatueCode(405);
+        resp->SetStatueCode(405);
+        return;
     }
 }
+
 bool HttpServer::isStaticRequest(HttpRequest &req, HttpResPonse *resp)
 { // 处理静态资源
-
     if (req.method_ != "GET" && req.method_ != "POST")
         return false;
 
@@ -227,17 +230,21 @@ bool HttpServer::isStaticRequest(HttpRequest &req, HttpResPonse *resp)
         {
             LOG_FATAL("必须设置根目录路径");
         }
-        req.request_path_ = basedir_ + req.request_path_;
-        req.request_path_ += "index.html";
+        
+        // 优化字符串拼接
+        req.request_path_ = basedir_ + "/index.html";
         return true;
     }
+    
     if (util::isRegular(basedir_ + req.request_path_) == false)
     {
         return false;
     }
+    
     req.request_path_ = basedir_ + req.request_path_;
     return true;
 }
+
 bool HttpServer::HandleStaticSource(HttpRequest &req, HttpResPonse *resp)
 {
     // 将静态资源内容读取出来放到 resp body中
@@ -246,8 +253,8 @@ bool HttpServer::HandleStaticSource(HttpRequest &req, HttpResPonse *resp)
 
     if (ret == false)
         return false;
+        
     std::string mime = util::GetMime(req.request_path_);
-    ;
     resp->SetContent(std::move(content), mime);
 
     return true;
@@ -270,24 +277,31 @@ void HttpServer::Dispatcher(HttpRequest &req, HttpResPonse *resp, HandlerRoute &
         }
     }
     // 没找到这个功能路由 也不是静态资源请求
-   return Handle404(resp);
+    Handle404(resp);
 }
 
 void HttpServer::BuildResponseAndSend(Connection::PtrConnection conn, HttpRequest &req, HttpResPonse &resp)
 {
-    // 构建HTTP响应
-    std::string httpResLine = resp.GetVersion() + " " + std::to_string(resp.GetStatusCode()) + " " + util::getStatusMessage(resp.GetStatusCode()) + "\r\n"; // 请求行
-
-    std::string httpHeaders;
-    for (auto &h : resp.GetHeaders())
+    // 使用stringstream构建HTTP响应
+    std::ostringstream oss;
+    
+    // 构建响应行
+    oss << resp.GetVersion() << " " 
+        << resp.GetStatusCode() << " " 
+        << util::getStatusMessage(resp.GetStatusCode()) << "\r\n";
+    
+    // 构建响应头
+    for (const auto &h : resp.GetHeaders())
     {
-        httpHeaders += h.first;
-        httpHeaders += ": ";
-        httpHeaders += h.second;
-        httpHeaders += "\r\n";
+        oss << h.first << ": " << h.second << "\r\n";
     }
-    httpHeaders += "\r\n";
-    std::string httpResp = httpResLine + httpHeaders + resp.GetContent();
+    
+    // 响应头结束
+    oss << "\r\n";
+    
+    // 构建完整响应
+    std::string httpResp = oss.str() + resp.GetContent();
+    
     conn->Send(httpResp.c_str(), httpResp.size());
 }
 

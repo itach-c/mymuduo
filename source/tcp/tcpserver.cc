@@ -45,6 +45,7 @@ void TcpServer::ReMoveConnectionInLoop(const Connection::PtrConnection &conn)
 
 void TcpServer::NewConnection(int fd)
 {
+    //std::cout << "连接处理线程 tid: " << gettid() << std::endl;
     
     EventLoop* nextloop = loopthread_pool_.NextLoop();
     LOG_DEBUG("newfd %d -> eventloop %p ",fd ,nextloop);

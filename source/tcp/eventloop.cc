@@ -12,6 +12,7 @@ EventLoop::EventLoop()
 
 void EventLoop::RunAllTasks()
 {
+    if(tasks_.size() == 0) return;
     std::vector<Functor> tasks;
     {
         std::unique_lock<std::mutex> lock(mtx_);
@@ -29,6 +30,7 @@ void EventLoop::RunInLoop(const Functor &cb)
 {
     // 判断任务是否在 eventloop 中，如果是则直接执行
     // 否则将任务加入任务队列
+
     if (IsInLoop())
     {
         return cb();
@@ -52,7 +54,6 @@ bool EventLoop::IsInLoop()
 {
     // 判断当前是否在 eventloop 中
     // 返回 true 或 false
-
     return thread_id_ == std::this_thread::get_id();
 }
 
@@ -76,7 +77,6 @@ void EventLoop::Start()
     {
         std::vector<Channel *> actives;
         poller_.Poll(&actives);
-
         for (auto &channel : actives)
         {
             channel->HandleEvent();

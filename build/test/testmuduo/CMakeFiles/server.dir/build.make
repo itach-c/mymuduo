@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/itach/code/project/mymuduo
+CMAKE_SOURCE_DIR = /home/itach/code/c++code/project/mymuduo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/itach/code/project/mymuduo/build
+CMAKE_BINARY_DIR = /home/itach/code/c++code/project/mymuduo/build
 
 # Include any dependencies generated for this target.
 include test/testmuduo/CMakeFiles/server.dir/depend.make
@@ -70,18 +70,18 @@ include test/testmuduo/CMakeFiles/server.dir/progress.make
 include test/testmuduo/CMakeFiles/server.dir/flags.make
 
 test/testmuduo/CMakeFiles/server.dir/test.cc.o: test/testmuduo/CMakeFiles/server.dir/flags.make
-test/testmuduo/CMakeFiles/server.dir/test.cc.o: /home/itach/code/project/mymuduo/test/testmuduo/test.cc
+test/testmuduo/CMakeFiles/server.dir/test.cc.o: /home/itach/code/c++code/project/mymuduo/test/testmuduo/test.cc
 test/testmuduo/CMakeFiles/server.dir/test.cc.o: test/testmuduo/CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/testmuduo/CMakeFiles/server.dir/test.cc.o"
-	cd /home/itach/code/project/mymuduo/build/test/testmuduo && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/testmuduo/CMakeFiles/server.dir/test.cc.o -MF CMakeFiles/server.dir/test.cc.o.d -o CMakeFiles/server.dir/test.cc.o -c /home/itach/code/project/mymuduo/test/testmuduo/test.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/testmuduo/CMakeFiles/server.dir/test.cc.o"
+	cd /home/itach/code/c++code/project/mymuduo/build/test/testmuduo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/testmuduo/CMakeFiles/server.dir/test.cc.o -MF CMakeFiles/server.dir/test.cc.o.d -o CMakeFiles/server.dir/test.cc.o -c /home/itach/code/c++code/project/mymuduo/test/testmuduo/test.cc
 
 test/testmuduo/CMakeFiles/server.dir/test.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/test.cc.i"
-	cd /home/itach/code/project/mymuduo/build/test/testmuduo && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/project/mymuduo/test/testmuduo/test.cc > CMakeFiles/server.dir/test.cc.i
+	cd /home/itach/code/c++code/project/mymuduo/build/test/testmuduo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itach/code/c++code/project/mymuduo/test/testmuduo/test.cc > CMakeFiles/server.dir/test.cc.i
 
 test/testmuduo/CMakeFiles/server.dir/test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/test.cc.s"
-	cd /home/itach/code/project/mymuduo/build/test/testmuduo && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/project/mymuduo/test/testmuduo/test.cc -o CMakeFiles/server.dir/test.cc.s
+	cd /home/itach/code/c++code/project/mymuduo/build/test/testmuduo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itach/code/c++code/project/mymuduo/test/testmuduo/test.cc -o CMakeFiles/server.dir/test.cc.s
 
 # Object files for target server
 server_OBJECTS = \
@@ -90,21 +90,21 @@ server_OBJECTS = \
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
-/home/itach/code/project/mymuduo/test/testmuduo/server: test/testmuduo/CMakeFiles/server.dir/test.cc.o
-/home/itach/code/project/mymuduo/test/testmuduo/server: test/testmuduo/CMakeFiles/server.dir/build.make
-/home/itach/code/project/mymuduo/test/testmuduo/server: test/testmuduo/CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/itach/code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/itach/code/project/mymuduo/test/testmuduo/server"
-	cd /home/itach/code/project/mymuduo/build/test/testmuduo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
+/home/itach/code/c++code/project/mymuduo/test/testmuduo/server: test/testmuduo/CMakeFiles/server.dir/test.cc.o
+/home/itach/code/c++code/project/mymuduo/test/testmuduo/server: test/testmuduo/CMakeFiles/server.dir/build.make
+/home/itach/code/c++code/project/mymuduo/test/testmuduo/server: test/testmuduo/CMakeFiles/server.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/itach/code/c++code/project/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/itach/code/c++code/project/mymuduo/test/testmuduo/server"
+	cd /home/itach/code/c++code/project/mymuduo/build/test/testmuduo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-test/testmuduo/CMakeFiles/server.dir/build: /home/itach/code/project/mymuduo/test/testmuduo/server
+test/testmuduo/CMakeFiles/server.dir/build: /home/itach/code/c++code/project/mymuduo/test/testmuduo/server
 .PHONY : test/testmuduo/CMakeFiles/server.dir/build
 
 test/testmuduo/CMakeFiles/server.dir/clean:
-	cd /home/itach/code/project/mymuduo/build/test/testmuduo && $(CMAKE_COMMAND) -P CMakeFiles/server.dir/cmake_clean.cmake
+	cd /home/itach/code/c++code/project/mymuduo/build/test/testmuduo && $(CMAKE_COMMAND) -P CMakeFiles/server.dir/cmake_clean.cmake
 .PHONY : test/testmuduo/CMakeFiles/server.dir/clean
 
 test/testmuduo/CMakeFiles/server.dir/depend:
-	cd /home/itach/code/project/mymuduo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/itach/code/project/mymuduo /home/itach/code/project/mymuduo/test/testmuduo /home/itach/code/project/mymuduo/build /home/itach/code/project/mymuduo/build/test/testmuduo /home/itach/code/project/mymuduo/build/test/testmuduo/CMakeFiles/server.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/itach/code/c++code/project/mymuduo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/itach/code/c++code/project/mymuduo /home/itach/code/c++code/project/mymuduo/test/testmuduo /home/itach/code/c++code/project/mymuduo/build /home/itach/code/c++code/project/mymuduo/build/test/testmuduo /home/itach/code/c++code/project/mymuduo/build/test/testmuduo/CMakeFiles/server.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : test/testmuduo/CMakeFiles/server.dir/depend
 

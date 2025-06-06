@@ -72,6 +72,7 @@ void Channel::HandleEvent()
     if (revents_ & EPOLLIN || revents_ & EPOLLHUP || revents_ & EPOLLPRI)
     {
 
+       // printf("fd %d 读事件触发 准备调用读回调 tid: %u\n",fd_,gettid());
         if (ReadCallBack_)
         {
             ReadCallBack_();
@@ -81,6 +82,7 @@ void Channel::HandleEvent()
     // 对于可能触发连接关闭的回调只处理一个,例如写时发现连接关闭,则关闭套接字
     if (revents_ & EPOLLOUT)
     {
+       // printf("fd %d 写事件触发 准备调用读回调tid: %u\n",fd_,gettid());
 
         if (WriteCallBack_)
         {
